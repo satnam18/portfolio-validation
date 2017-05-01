@@ -1,0 +1,76 @@
+<html>
+<body onload="DrawCaptcha();">
+<script>
+
+function DrawCaptcha()
+    {
+        var a = Math.ceil(Math.random() * 9);
+        var b = Math.ceil(Math.random() * 9);       
+        var c = Math.ceil(Math.random() * 9);  
+        var d = Math.ceil(Math.random() * 9);  
+        var e = Math.ceil(Math.random() * 9);  
+        var f = Math.ceil(Math.random() * 9);  
+        var g = Math.ceil(Math.random() * 9);  
+        var code = a + ' ' + b + ' ' + ' ' + c + ' ' + d + ' ' + e + ' '+ f + ' ' + g;
+        document.getElementById("txtCaptcha").value = code;
+    }
+	function ValidCaptcha(){
+        var str1 = removeSpaces(document.getElementById('txtCaptcha').value);
+        var str2 = removeSpaces(document.getElementById('txtInput').value);
+        var l=document.getElementById("c2").value;
+		if ((str1 == str2)&&(l=="priya"))
+		{
+		document.getElementById("demo").style.cssText='visibility:visible' ;
+		}
+		else{
+		window.alert("Invalid input for captcha or password");
+		}
+        
+    }
+ function removeSpaces(string)
+    {
+        return string.split(' ').join('');
+    }
+   
+	</script>
+
+<link rel="stylesheet" href="feed2.css" type="text/css">
+<br><br><br>
+<table>
+<tr>
+<td>
+User name:</td> <td><input type="text" name="usn" ></td>
+</tr>
+<tr>
+<td>
+Password: </td><td><input type="password" name="pass" id="c2"></td>
+</tr>
+
+<tr>
+    <td>
+        Enter the Captcha<br />
+    </td>
+    <td>
+        <input type="text" id="txtCaptcha" 
+            style="background-image:url(1.jpg); text-align:center; border:none;
+            font-weight:bold; font-family:Modern" />
+        <input type="button" id="btnrefresh" value="Refresh" onclick="DrawCaptcha();" />
+    </td>
+</tr>
+<tr><td></td>
+    <td>
+        <input type="text" id="txtInput"/>    
+    </td>
+</tr>
+<tr>
+<td></td><td>
+<button type="submit" value="submit" onclick="ValidCaptcha()" >Validate </button>
+</td>
+</tr>
+</table>
+
+
+
+<br><p id="demo" style="visibility:hidden"><a href="xml.xml">Submit</a></p><br>
+</body>
+</html>

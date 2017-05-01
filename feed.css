@@ -1,0 +1,25 @@
+body
+{
+background-color:DarkSlateGray;
+color:white;
+}
+table,tr,td{
+color:white;
+margin-left:10%;
+}
+h1
+{
+margin-left:10%;
+margin-bottom:5%;
+margin-top:5%;
+font-size:350%;
+}
+footer
+{
+font-weight:bold;
+text-align:center;
+margin-top:10%;
+margin-left:6%;
+font-family:Comic Sans MS;
+font-size:35px;
+color:white;}

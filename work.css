@@ -1,0 +1,46 @@
+body
+{
+background-color:silver;
+}
+img
+{
+width: 20%;
+margin-top:0px;
+margin-left:80%;
+margin-right:10px;
+
+}
+footer
+{
+margin-left:45%;
+font-weight:bold;
+}
+table,tr
+{
+width:50%;
+
+margin-top:60px;
+margin-left:50px;
+border: 2px solid black;
+
+}
+table,tr,td
+{
+border-collapse:collapse;
+}
+tr,td
+{
+color: #008B8B;
+font-family: Segoe UI Black;
+font-size:20px;
+}
+
+header
+{
+width:70%;
+color:white;
+background-color:#4682B4;
+margin-left:10px;
+margin-top:50px;
+
+}

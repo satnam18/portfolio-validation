@@ -1,0 +1,46 @@
+header
+{margin-bottom:5%;
+margin-left:10%;
+margin-top:20px;
+color:MediumBlue;
+font-size:150%;
+font-family:Comic Sans MS;
+}
+ul
+{
+margin-left:20%;
+list-style-image:url(animat_1.gif);
+}
+li
+{
+font-family:Comic Sans MS;
+font-size:100%;
+}
+table
+{
+        width: 350;
+
+color:teal;
+margin-left:15%;
+font-weight:bold;
+font-variant:italic;
+}
+form
+{
+    width: 250;
+margin-left:200%;
+}
+fieldset
+{
+background-color:LightSteelBlue;
+width:200;
+}
+footer
+{
+text-align:center;
+margin-top:10%;
+margin-left:10%;
+font-family:Comic Sans MS;
+font-size:20px;
+color:teal;
+}

@@ -1,0 +1,155 @@
+
+<html>
+    <head>
+        
+        
+<script type="text/javascript">
+    
+    
+    function check() {
+        var color = "";
+        var flag=0;
+    if(document.getElementById("txtPassword").value === document.getElementById("confirm_password").value) {
+       flag=1;
+    } 
+    if(flag==1)
+    {
+        color="green";
+        message.style.color = color;
+         document.getElementById("message").innerHTML = "match";
+    }
+    else
+    {
+        color="red";
+         message.style.color = color;
+         document.getElementById("message").innerHTML = " no match";
+        
+    }
+}
+
+
+    function CheckPasswordStrength(password) {
+        var password_strength = document.getElementById("password_strength");
+ 
+        //TextBox left blank.
+        if (password.length == 0) {
+            password_strength.innerHTML = "";
+            return;
+        }
+ 
+        //Regular Expressions.
+        var regex = new Array();
+        regex.push("[A-Z]"); //Uppercase Alphabet.
+        regex.push("[a-z]"); //Lowercase Alphabet.
+        regex.push("[0-9]"); //Digit.
+        regex.push("[$@$!%*#?&]"); //Special Character.
+ 
+        var passed = 0;
+ 
+        //Validate for each Regular Expression.
+        for (var i = 0; i < regex.length; i++) {
+            if (new RegExp(regex[i]).test(password)) {
+                passed++;
+            }
+        }
+ 
+        //Validate for length of Password.
+        if (passed > 2 && password.length > 8) {
+            passed++;
+        }
+ 
+        //Display status.
+        var color = "";
+        var strength = "";
+        switch (passed) {
+            case 0:
+            case 1:
+                strength = "Weak";
+                color = "red";
+                break;
+            case 2:
+                strength = "Good";
+                color = "darkorange";
+                break;
+            case 3:
+            case 4:
+                strength = "Strong";
+                color = "green";
+                break;
+            case 5:
+                strength = "Very Strong";
+                color = "darkgreen";
+                break;
+        }
+        password_strength.innerHTML = strength;
+        password_strength.style.color = color;
+    }
+    function my() {
+        var color = "";
+        var flag=0;
+    if(document.getElementById("pin").value ==="1234") {
+       flag=1;
+    } 
+    if(flag==1)
+    {
+        color="green";
+        msg.style.color = color;
+         document.getElementById("msg").innerHTML = "match";
+    }
+    else
+    {
+        color="red";
+         msg.style.color = color;
+         document.getElementById("msg").innerHTML = " no match";
+        
+    }
+}
+
+
+</script>
+        
+        
+        
+<link rel="stylesheet" type="text/css" href="css2.css">      
+<title>authentication</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header class="2">
+        <h1> WELCOME !!</h1>
+        <h3> PASSWORD UPDATION </h3>
+        </header>
+        <p id="para"> YOU ENTERED THE WRONG PASSWORD. EITHER YOU RESET IT. OR GO BACK AND RE-ENTER YOUR PASSWORD</p>
+        <form action="jsp2.jsp">
+            <fieldset>
+                <legend id="1"><img src="lock.jpg"></legend>
+            <table>
+                <tr><th id="th">WELCOME !!</th></tr>
+                <tr></tr><tr></tr><tr></tr>
+                
+                <tr><td><input type="text" placeholder="USERNAME" name="user" required></td></tr>
+                <tr></tr>
+                <tr><td><input type="email" placeholder="@gmail.com/+91xxxxxx" name="email" required></td></tr>
+                <tr></tr>
+                <tr><td><input type="text" placeholder="4 digit pin " name="code" id="pin" onkeyup="my(this.value)" required></td><td> <span id='msg'></span></td></tr>
+                <tr></tr>
+              
+                
+                <tr><td><input type="password" placeholder="••••••••" name="pass" id="txtPassword" onkeyup="CheckPasswordStrength(this.value)" required></td>
+                    <td> <span id="password_strength"></span></td></tr><tr></tr>
+                <tr><td><input type="password" placeholder="confirm ••••••••" name="cpass" id="confirm_password" onkeyup="check()" required> 
+                    </td><td> <span id='message'></span></td></tr>
+                <tr></tr><tr></tr><tr></tr><tr></tr>
+                <tr><td><input type="submit"  id="button" value="UPDATE"></td>
+                   
+
+            </table>
+            </fieldset>
+        </form>
+        
+        
+
+       
+    </body>
+</html>

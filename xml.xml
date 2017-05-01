@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<?xml-stylesheet href="xsl.xsl" type="text/xsl" ?>
+<result>
+    <course>
+       
+        <name>WEB-TECH</name> 
+        <code>ITE309</code>
+        <marks>29 </marks>
+        <rank> 15</rank>
+    
+    </course>
+     <course>
+       
+        <name> TOC</name> 
+        <code>ITE203</code>
+        <marks>47 </marks>
+        <rank>1</rank>
+    
+    </course>
+     <course>
+       
+        <name> OS</name> 
+        <code>ITE208</code>
+        <marks> 43</marks>
+        <rank>2</rank>
+    
+    </course>
+     <course>
+       
+        <name>OOAD</name> 
+        <code>ITE301</code>
+        <marks>38</marks>
+        <rank>3</rank>
+    
+    </course>
+    
+</result>

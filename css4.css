@@ -1,0 +1,40 @@
+#div2
+{
+background-color:#69c60e;
+color:white;
+font-family:Engravers MT;
+font-size:20px;
+padding:10px;
+width:100%;
+}
+
+header
+{
+background-color:#69c60e;
+color:white;
+font-family:Engravers MT;
+font-size:20px;
+padding:10px;
+}
+
+img1
+{
+    width:220px;
+    height:220px;
+    position: absolute;
+    left:30%;
+}
+
+#div1{
+   color:#69c60e;
+    width:60%;
+    
+}
+#td1
+{
+   position: absolute;
+   left:20%;
+    color:#69c60e;
+    font-weight:bold;
+    font-size: 190%;
+}
